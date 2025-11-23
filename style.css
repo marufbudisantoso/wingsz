@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffb6d9 0%, #ffc0e5 50%, #ffb6d9 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fix SweetAlert2 Button */
+.swal2-popup {
+  width: 90% !important;
+  max-width: 400px !important;
+  padding: 2em !important;
+}
+
+.swal2-confirm {
+  min-width: 100px !important;
+  padding: 10px 30px !important;
+}
+
+/* ---------------- Layout Elemen (Dekorasi) ---------------- */
+
+.banner1 {
+  position: absolute;
+  top: -62px;
+  left: 44%;
+  transform: translateX(-50%);
+  width: 250px;
+  max-width: 90%;
+  z-index: 5;
+}
+
+.banner2 {
+  position: absolute;
+  top: -62px;
+  left: 56.9%;
+  transform: translateX(-50%);
+  width: 250px;
+  max-width: 90%;
+  z-index: 5;
+}
+
+@keyframes bannerSway {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+  75% {
+    transform: translateX(-50%) rotate(2deg);
+  }
+}
+
+.cake {
+  position: absolute;
+  top: 150px;
+  left: 480px;
+  width: 220px;
+  max-width: 35%;
+  animation: rotateCake 5s ease-in-out infinite;
+  z-index: 5;
+}
+
+@keyframes rotateCake {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(15deg) scale(1.05);
+  }
+}
+
+.balloon {
+  position: absolute;
+  top: 450px;
+  right: 500px;
+  width: 200px;
+  max-width: 40%;
+  animation: floatBalloon 4s ease-in-out infinite;
+  z-index: 5;
+}
+
+@keyframes floatBalloon {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+}
+
+.doll {
+  position: absolute;
+  bottom: 0;
+  left: 520px;
+  width: 180px;
+  max-width: 40%;
+  animation: dollSway 3s ease-in-out infinite;
+  z-index: 5;
+}
+
+@keyframes dollSway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* ---------------- Login Form ---------------- */
+
+.login-container {
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  max-height: 90vh;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  border: 3px solid #ff69b4;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  color: #ff69b4;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+.title span {
+  font-family: "Pacifico", cursive;
+  font-size: 4.5rem;
+  font-weight: normal;
+  display: block;
+  color: #ff69b4;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #ff69b4;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: #ff69b4;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #ff69b4;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  margin-left: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: 2px solid #ffb6d9;
+  background: rgba(255, 182, 217, 0.2);
+  outline: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff69b4;
+  background: white;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+}
+
+input::placeholder {
+  color: #ffb6d9;
+  font-size: 0.9rem;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* Button Login */
+button {
+  width: 30%;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(255, 182, 217, 0.8);
+  border: 2px solid #ffb6d9;
+  color: #ff69b4;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 182, 217, 0.4);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: white;
+  border-color: #ff69b4;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Confetti Canvas */
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------------- Responsive Design ---------------- */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .login-container {
+    margin: 120px auto 50px;
+    padding: 35px 25px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .title span {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .date {
+    font-size: 1.1rem;
+  }
+
+  .banner {
+    width: 300px;
+  }
+
+  .cake {
+    width: 180px;
+    top: 80px;
+    left: 30px;
+  }
+
+  .balloon {
+    width: 220px;
+    top: 120px;
+  }
+
+  .doll {
+    width: 200px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .login-container {
+    margin: 10px auto 10px;
+    padding: 10px 20px;
+    width: 80%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .title span {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+
+  .date {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  input::placeholder {
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  .banner {
+    width: 250px;
+    top: 5px;
+  }
+
+  .cake {
+    width: 140px;
+    top: 150px;
+    left: 15px;
+  }
+
+  .balloon {
+    width: 170px;
+    top: 180px;
+    right: 10px;
+  }
+
+  .doll {
+    width: 100px;
+    left: 40px;
+    bottom: 150px;
+  }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 360px) {
+  .login-container {
+    margin: 90px auto 30px;
+    padding: 25px 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .title span {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+
+  input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .banner {
+    width: 200px;
+  }
+
+  .cake {
+    width: 110px;
+    top: 65px;
+  }
+
+  .balloon {
+    width: 140px;
+    top: 90px;
+  }
+
+  .doll {
+    width: 130px;
+  }
+}
+
+/* Landscape Mode untuk Mobile */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .login-container {
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .cake,
+  .doll {
+    display: none;
+  }
+
+  .banner {
+    width: 200px;
+    top: 5px;
+  }
+
+  .balloon {
+    width: 150px;
+    top: 50px;
+  }
+}

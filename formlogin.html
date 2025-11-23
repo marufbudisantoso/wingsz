@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Ulang Tahun</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <!-- Kue -->
+    <img src="cake.png" class="cake" alt="cake" />
+
+    <!-- Balon -->
+    <img src="balon.png" class="balloon" alt="balloons" />
+
+    <!-- Boneka -->
+    <img src="boneka.png" class="doll" alt="doll" />
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <div class="login-container">
+      <h1 class="title">Happy <span>Birthday</span></h1>
+      <p class="subtitle">Andini Novela Putri</p>
+      <p class="date">28 Nov 2006</p>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label>Nama</label>
+          <input type="text" id="username" placeholder="Andini Novela Putri" />
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" placeholder="28 Nov 2006" />
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

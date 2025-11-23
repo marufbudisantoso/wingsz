@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Baby 💖</title>
+    <link rel="stylesheet" href="index-style.css" />
+  </head>
+  <body>
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Pop-up Welcome -->
+    <div id="welcomePopup" class="popup-overlay">
+      <div class="popup-content">
+        <h1 class="popup-title">Hello My Love<span class="heart">❤️</span></h1>
+        <p class="popup-subtitle">i hope you enjoy your stay</p>
+        <button class="popup-btn" id="startBtn">Star Exploring</button>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <h1 class="main-title">For My Baby<span class="heart">❤️</span></h1>
+      <p class="main-subtitle">A special place just for you</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <button class="nav-btn active" data-page="mylove"><span class="nav-icon">❤️</span>My Love</button>
+      <button class="nav-btn" data-page="music"><span class="nav-icon">🎵</span>Music</button>
+      <button class="nav-btn" data-page="gallery"><span class="nav-icon">🖼️</span>Gallery</button>
+      <button class="nav-btn" data-page="notes"><span class="nav-icon">📝</span>Notes</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- My Love Page -->
+      <div id="mylove" class="page active">
+        <div class="content-wrapper">
+          <!-- Photo Section -->
+          <div class="photo-section">
+            <div class="photo-frame1">
+              <img src="photo 1.jpg" alt="Photo 1" class="photo" />
+            </div>
+            <div class="photo-frame2">
+              <img src="photo 2.jpg" alt="Photo 2" class="photo" />
+              <div class="photo-placeholder">
+                <span>📷</span>
+                <p>Photo 2</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message Section -->
+          <div class="message-section">
+            <h2 class="message-title">Happy<br />Birthday</h2>
+            <p class="message-text">
+              ya, sayang. Semoga di umur baru mu ini, semoga semua hal baik datang ke kamu, semoga apa yang kamu pengenin pelan-pelan tercapai, dan semoga aku bisa terus ada di samping kamu dari momen yang bikin kita ketawa sampai yang
+              bikin kita saling nguatin. Aku bersyukur banget punya kamu, udah cantik, baik, ngeselin dikit sii tapi gapapa mwehehe tapi aku tetap sukaa. Aku sayang banget sama kamu, jadii kalo kamu ada apa-apa cerita ke aku yaa sayang.
+              Pokoknya Happy birthday, my love. Semoga kamu selalu ngerasa dicintai terutama sama aku. ❤️
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music Page -->
+      <div id="music" class="page">
+        <div class="empty-state">
+          <span class="empty-icon">🎵</span>
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+
+      <!-- Gallery Page -->
+      <div id="gallery" class="page">
+        <div class="empty-state">
+          <span class="empty-icon">🖼️</span>
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+
+      <!-- Notes Page -->
+      <div id="notes" class="page">
+        <div class="empty-state">
+          <span class="empty-icon">📝</span>
+          <p>Coming Soon...</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="index-script.js"></script>
+  </body>
+</html>
